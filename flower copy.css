@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #f0f8ff;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff6347;
+  transform: rotate(45deg);
+  animation: bloom 2s ease-out forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ff6347;
+  border-radius: 50%;
+}
+
+.heart::before {
+  left: 0;
+  top: 0;
+}
+
+.heart::after {
+  right: 0;
+  top: 0;
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

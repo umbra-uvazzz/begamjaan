@@ -1,0 +1,22 @@
+.splash {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 200, 255, 0.4);
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: splashEffect 0.5s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  @keyframes splashEffect {
+    to {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+  
+  body{
+    background-color: black;
+  }

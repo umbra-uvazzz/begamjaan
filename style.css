@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #732255, #E7F2E4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #732255, #732255, #ae2d7f, #f1e4f2);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Loading Screen */
+#loading-screen {
+    position: fixed;
+    z-index: 9999;
+    background-color: #B2C6D5;
+    color: #732255;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    transition: opacity 1s ease;
+  }
+  
+  .scrolling-text h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5em;
+  }
+  
+  .typing-text {
+    max-width: 1000px;
+    font-size: 1.1em;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow: hidden;
+  }
+    
+  body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #ff9a9e, #fad0c4);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 40%),
+              radial-gradient(circle at 70% 70%, rgba(255,255,255,0.15) 0%, transparent 40%);
+  animation: waveMove 30s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(178,198,213, 0.8);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  max-width: 650px;
+}
+
+@keyframes bgchange {
+  0% {background-color: rgba(255, 248, 240, 0.8)}
+  50% {background-color: #fff0f5;}
+  100% {background-color: rgba(255, 248, 240, 0.8)}
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes waveMove {
+  0% { transform: translate(-25%, -25%) rotate(0deg); }
+  100% { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+h1 {
+  color: #732255;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.balloons {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #732255;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d51c91;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+                      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    background-size: 200% 200%;
+    animation: waveOverlay 10s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  @keyframes waveOverlay {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }

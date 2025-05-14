@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Happy Birthday!</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <script>
+        window.addEventListener('load', () => {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => loadingScreen.style.display = 'none', 1000);
+        }, 46000);
+        
+const paragraph = `Happy Birthday, My Love, Darling, Meri Begum Jaan! 💖👑
+
+Today’s the day the universe decided to bless the world with your beautiful, stubborn, soft-hearted, and utterly chaotic self - and I wouldn’t have it any other way. From being my favorite person to tease, to being the one who knows how to make me smile without even trying, you’ve been nothing short of magic in my life.
+
+You deserve all the joy, love, and laughter this world has to offer - and I’ll personally make sure you get extra teasing, extra care, and all the royal treatment, Begum Jaan-style. 😌✨
+
+Here’s to more memories, more laughs, more dumb inside jokes, and a lifetime of calling you “my love” just to annoy you (and maybe mean it just a little too). 💞
+
+Love you always
+Your forever troublemaker.
+
+`;
+
+        let i = 0;
+        const typingElement = document.getElementById("typing-text");
+
+        function typeText() {
+            if (i < paragraph.length) {
+            typingElement.textContent += paragraph.charAt(i);
+            i++;
+            setTimeout(typeText, 50);
+            }
+        }
+        typeText();
+        });
+    </script>
+
+    <body>
+    <div id="loading-screen">
+        <div class="scrolling-text">
+            <h2>Life isn’t about waiting for the storm to pass - it’s about dancing in the rain.</h2>
+            <p class="typing-text" id="typing-text"></p>
+        </div>
+    </div>
+      
+        
+    <div class="overlay"></div>
+
+
+    <div class="container">
+        <h1>🎉 Happy Birthday, Meri Jaan! 🎉</h1>
+            <p class="message">
+            Wishing you joy, laughter, and all the cake you can eat. You're the best friend anyone could ask for!
+            </p>
+        <div class="balloons">🎈 🎈 🎈 🎈 🎈</div>
+        <button><a href="flowers.html" target="_blank">Click Me!</a></button>
+        <button onclick="document.getElementById('bg-music').play()">🎶 Play Music</button>
+        <button><a href="wishes copy.html" target="_blank">Wishes!!!!</a></button>
+    </div>
+
+
+    <audio id="bg-music" src="birthday.mp3" autoplay loop></audio>
+    <script>
+        const audio = document.getElementById("bg-music");
+        audio.volume = 0.1;
+    </script>
+    </body>
+</html>
